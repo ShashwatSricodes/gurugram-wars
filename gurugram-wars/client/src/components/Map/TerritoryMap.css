@@ -1,0 +1,62 @@
+.map-wrapper {
+  position: fixed;
+  top: 58px;
+  left: 0;
+  right: 270px;
+  bottom: 0;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+
+.hex-cell {
+  cursor: crosshair;
+}
+
+/* Leaflet tooltip override */
+.hex-tooltip {
+  background: rgba(8,8,16,0.95) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 6px !important;
+  color: var(--text-primary) !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: 12px !important;
+  padding: 5px 10px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4) !important;
+}
+
+.hex-tooltip::before { display: none !important; }
+
+.hex-tip {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 500;
+}
+
+.tip-dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Cooldown overlay hint */
+.map-overlay-msg {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(239,68,68,0.15);
+  border: 1px solid rgba(239,68,68,0.3);
+  color: var(--danger);
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+}
